@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
+</head>
+<body>
+<div class="container">
+    <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+    <form class="form-horizontal" >
+    <h2>Do you want to delete it?</h2>
+    <button type="submit" th:object="${isbn}" th:action="@{/deleteBook}" method="post">Submit</button>
+    </form>
+</div>
+
+</body>
+</html>
