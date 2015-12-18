@@ -26,35 +26,34 @@ public class BookShelfController {
     }
 
     @RequestMapping(value = "book/{isbn}", method = RequestMethod.GET)
-    public ModelAndView showBook(@PathVariable String isbn) {
-        ModelMap model = new ModelMap();
-        model.put("book", bookService.findByIsbn(isbn));
-        return new ModelAndView("book", model);
+    @ResponseBody
+    public Book showBook(@PathVariable String isbn) {
+       return bookService.findByIsbn(isbn);
     }
 
     @RequestMapping(value = "book/new", method = RequestMethod.GET)
-    public ModelAndView newBook() {
-        ModelMap model = new ModelMap();
-        model.put("book", new Book());
-        return new ModelAndView("newBook", model);
+    @ResponseBody
+    public Book newBook() {
+       return new Book("", "", "", 0.0);
     }
 
     @RequestMapping(value = "book", method = RequestMethod.POST)
-    public String saveBook(Book book) {
+    @ResponseBody
+    public Iterable<Book> saveBook(Book book) {
         bookService.create(book);
-        return "redirect:/book/" + book.getIsbn();
+        return bookService.findAll();
     }
 
     @RequestMapping(value = "book/edit/{isbn}", method = RequestMethod.GET)
-    public ModelAndView editBook(@PathVariable String isbn) {
-        ModelMap model = new ModelMap();
-        model.put("book", bookService.findByIsbn(isbn));
-        return new ModelAndView("newBook", model);
+    @ResponseBody
+    public Book editBook(@PathVariable String isbn) {
+        return bookService.findByIsbn(isbn);
     }
 
     @RequestMapping(value = "delete/{isbn}", method = RequestMethod.GET)
-    public String  deleteBook(@PathVariable String isbn) {
+    @ResponseBody
+    public Iterable<Book> deleteBook(@PathVariable String isbn) {
         bookService.delete(isbn);
-        return "redirect:/";
+        return bookService.findAll();
     }
 }
