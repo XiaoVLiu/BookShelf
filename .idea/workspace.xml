@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="03126590-a393-4ce3-8b20-bde452cf1b1d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/web/controller/BookShelfController.java" afterPath="$PROJECT_DIR$/src/main/java/web/controller/BookShelfController.java" />
-    </list>
+    <list default="true" id="03126590-a393-4ce3-8b20-bde452cf1b1d" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -1061,7 +1058,7 @@
       <workItem from="1450228458992" duration="3702000" />
       <workItem from="1450336604130" duration="13429000" />
       <workItem from="1450365673551" duration="1146000" />
-      <workItem from="1450432729843" duration="3452000" />
+      <workItem from="1450432729843" duration="3468000" />
     </task>
     <task id="LOCAL-00001" summary="add delete">
       <created>1450229559159</created>
@@ -1081,7 +1078,13 @@
       <option name="project" value="LOCAL" />
       <updated>1450445806440</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="return json">
+      <created>1450448461533</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1450448461533</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1090,7 +1093,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51880000" />
+    <option name="totallyTimeSpent" value="51896000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="86" width="1291" height="716" extended-state="0" />
