@@ -11,6 +11,10 @@ import org.springframework.web.bind.annotation.RestController;
 import com.thoughtworks.jimmy.entity.BookEntity;
 import com.thoughtworks.jimmy.service.BookService;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.awt.print.Book;
+
 @RestController
 @RequestMapping("/books")
 public class BookShelfController {
@@ -63,9 +67,10 @@ public class BookShelfController {
     @RequestMapping(value = "{isbn}", method = RequestMethod.DELETE)
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void delete(@PathVariable String isbn) {
-
         bookService.delete(isbn);
-
     }
+
+   // @RequestMapping(value = "/pages/{pageIndex}/{pageSize}", method = RequestMethod.GET)
+    //public Iterable<Book> queryByPages(@PathVariable String pageIndex, @PathVariable String pageSize, HttpServletRequest request, HttpServletResponse response)
 
 }
